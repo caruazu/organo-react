@@ -5,7 +5,8 @@
 .input-text label{
     display: block;
     margin-bottom: 8px;
-    font-size: 24;
+    font-size: 12;
+    font-weight: bold;
 }
 
 .input-text input{
