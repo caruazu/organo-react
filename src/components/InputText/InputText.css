@@ -1,16 +1,15 @@
-.input-text{
+.input-text {
     margin: 24px 0;
 }
 
-.input-text label{
+.input-text label {
     display: block;
     margin-bottom: 8px;
-    font-size: 12;
-    font-weight: bold;
+    font-size: 24px;
 }
 
-.input-text input{
-    background-color: white;
+.input-text input {
+    background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     width: 100%;
     border: none;
