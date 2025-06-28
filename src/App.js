@@ -1,10 +1,11 @@
-import Banner from './components/banner/Banner';
+import Banner from './components/Banner/Banner';
+import InputText from './components/InputText/InputText';
 
 function App() {
   return (
     <div className="App">
       <Banner></Banner>
-      <p>Organo</p>
+      <InputText></InputText>
     </div>
   );
 }
