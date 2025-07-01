@@ -1,6 +1,7 @@
 import './FormPage.css'
 import InputText from '../InputText/InputText'
 import InputSelect from '../InputSelect/InputSelect'
+import InputButton from '../InputButton/InputButton'
 
 const FormPage = () => {
     const times = [
@@ -13,14 +14,20 @@ const FormPage = () => {
         ' Inovação e Gestão'
     ]
 
+    const aoSalvar = (event) => {
+        event.preventDefault()
+        console.log("salvo")
+    }
+
     return (
         <section className='form-page'>
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
-                <InputText label="Nome" placeholder="Digite seu nome"></InputText>
+                <InputText required label="Nome" placeholder="Digite seu nome"></InputText>
                 <InputText label="Cargo" placeholder="Digite seu cargo"></InputText>
                 <InputText label="Imagem" placeholder="Informe o endereço da imagem"></InputText>
                 <InputSelect label="Time" times={times}/>
+                <InputButton>Enviar</InputButton>
             </form>
         </section>
     )
