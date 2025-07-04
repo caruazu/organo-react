@@ -11,3 +11,7 @@
     box-shadow: 8px 8px 16px rgba(0, 0 ,0, 0.08);
     background-color: #F2F2F2;
 }
+
+.form-page h2 {
+    padding-bottom: 42px;
+}
