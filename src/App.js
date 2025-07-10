@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Banner from './components/Banner/Banner';
 import FormPage from './components/FormPage/FormPage';
 import Time from './components/Time/Time';
-import CardPage from './components/CardPage/CardPage';
 
 function App() {
 
@@ -55,7 +54,15 @@ function App() {
     <div className="App">
       <Banner/>
       <FormPage times={times.map(time => time.nome)} aoEnvio={colaborador => aoAvaliar(colaborador)} />
-      {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)}
+      {times.map(time => 
+        <Time
+          key={time.nome}
+          nome={time.nome}
+          corPrimaria={time.corPrimaria} 
+          corSecundaria={time.corSecundaria}
+          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        />
+      )}
     </div>
   );
 }

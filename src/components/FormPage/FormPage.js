@@ -20,6 +20,11 @@ const FormPage = (props) => {
             time: time
         }
         props.aoEnvio(campos)
+        
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (

@@ -1,14 +1,14 @@
 import './CardPage.css'
 
-const CardPage = () => {
+const CardPage = ({nome, img, time, cor}) => {
     return (
         <div className='card-page'>
-            <div className='cabecalho'>
-                <img src='https://github.com/caruazu.png' alt='foto do colaborador'/>
+            <div className='cabecalho' style={{backgroundColor:cor}}>
+                <img src={img} alt='foto do colaborador'/>
             </div>
             <div className='rodape'>
-                <h4>Gustavo</h4>
-                <h5>Desenvolvedor</h5>
+                <h4>{nome}</h4>
+                <h5>{time}</h5>
             </div>
         </div>
     )

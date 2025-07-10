@@ -1,5 +1,5 @@
-import CardPage from '../CardPage/CardPage'
 import './Time.css'
+import CardPage from '../CardPage/CardPage.js'
 
 const Time = (props) => {
 
@@ -7,11 +7,20 @@ const Time = (props) => {
     const h3CSS = {borderColor:props.corPrimaria}
     
     return (
-        <section className='time' style={sectionCSS}>
+        (props.colaboradores.length > 0) ? <section className='time' style={sectionCSS}>
             <h3 style={h3CSS}>{props.nome}</h3>
-            <CardPage/>
-            <CardPage/>
+            <div className='colaboradores'>
+                {props.colaboradores.map( colaborador => 
+                    <CardPage
+                        nome={colaborador.nome}
+                        time={colaborador.cargo}
+                        img={colaborador.imagem}
+                        cor={props.corPrimaria}
+                    />
+                )}
+            </div>
         </section>
+        : ''
     )
 }
 
