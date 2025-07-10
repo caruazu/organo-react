@@ -12,6 +12,7 @@ const Time = (props) => {
             <div className='colaboradores'>
                 {props.colaboradores.map( colaborador => 
                     <CardPage
+                        key={colaborador.nome}
                         nome={colaborador.nome}
                         time={colaborador.cargo}
                         img={colaborador.imagem}

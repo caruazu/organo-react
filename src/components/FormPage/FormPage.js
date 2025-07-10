@@ -33,7 +33,7 @@ const FormPage = (props) => {
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
                 <InputText valor={nome} aoAlterado={valor => setNome(valor)} required label="Nome" placeholder="Digite seu nome"></InputText>
                 <InputText valor={cargo} aoAlterado={valor => setCargo(valor)} required label="Cargo" placeholder="Digite seu cargo"></InputText>
-                <InputText valor={imagem} aoAlterado={valor => setImagem(valor)} required label="Imagem" placeholder="Informe o endereço da imagem"></InputText>
+                <InputText valor={imagem} aoAlterado={valor => setImagem(valor)} required label="Endereço da imagem" placeholder="Informe o endereço da imagem"></InputText>
                 <InputSelect
                     label="Time"
                     required
