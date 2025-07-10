@@ -5,15 +5,6 @@ import InputButton from '../InputButton/InputButton'
 import { useState } from 'react'
 
 const FormPage = (props) => {
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -41,7 +32,7 @@ const FormPage = (props) => {
                 <InputSelect
                     label="Time"
                     required
-                    times={times}
+                    times={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
