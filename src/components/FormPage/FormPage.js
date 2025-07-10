@@ -4,7 +4,7 @@ import InputSelect from '../InputSelect/InputSelect'
 import InputButton from '../InputButton/InputButton'
 import { useState } from 'react'
 
-const FormPage = () => {
+const FormPage = (props) => {
     const times = [
         'Programação',
         'Front-End',
@@ -22,7 +22,13 @@ const FormPage = () => {
 
     const aoSalvar = (event) => {
         event.preventDefault()
-        console.log("salvo! ", nome, cargo, imagem, time)
+        const campos = {
+            nome: nome,
+            cargo: cargo,
+            imagem: imagem,
+            time: time
+        }
+        props.aoEnvio(campos)
     }
 
     return (
